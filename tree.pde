@@ -4,7 +4,6 @@ float rotationAngle;   //rotation for branches
 float thickness;
 float scalethick;      //difference of thickness between branches
 int branchesLength;
-float skyAlpha;
 
 void setup(){
   size(700,700);
@@ -72,9 +71,9 @@ void tree(int level, float branchesLength, float strw, float rotationAngle){
 void grass(){
   strokeWeight(1.5);
   for(int i=0;i<width;i++){
-    float spost = random(-2,2);
+    float move = random(-2,2);
     stroke(random(75,120), random(100,200), 45);
-    line(i,height, i+spost, height-random(2,height-(height-15)));
+    line(i,height, i+move, height-random(2,height-(height-15)));
   }
 }
 
